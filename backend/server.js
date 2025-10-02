@@ -12,9 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-  ? "https://rig-veda-kundala-8job.vercel.app/"
-  : "http://localhost:3000",
+  origin: "https://rig-veda-kundala-8job.vercel.app/",
   credentials: true
 }));
 app.use(express.json());
