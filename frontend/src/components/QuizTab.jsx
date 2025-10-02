@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSpring, animated } from 'react-spring';
-import { Brain, CircleCheck as CheckCircle, Circle as XCircle, Trophy, Target, Sparkles } from 'lucide-react';
+import { Brain, CircleCheck as CheckCircle, Circle as XCircle, Trophy, Target, Sparkles ,Languages} from 'lucide-react';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';
 import { apiCall } from '../utilis/api';
@@ -28,13 +28,14 @@ const FloatingSymbol = ({ symbol, delay = 0 }) => {
   );
 };
 
-const QuizTab = ({ suktaId, onQuizComplete }) => {
+const QuizTab = ({ suktaId, onQuizComplete,lang}) => {
   const [quiz, setQuiz] = useState([]);
   const [answers, setAnswers] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [setLang] = useState('en');
 
   const headerAnimation = useSpring({
     opacity: quiz.length > 0 ? 1 : 0,
@@ -99,6 +100,8 @@ const QuizTab = ({ suktaId, onQuizComplete }) => {
   const isQuizComplete = quiz.length > 0 && Object.keys(answers).length === quiz.length;
   const progress = quiz.length > 0 ? (Object.keys(answers).length / quiz.length) * 100 : 0;
 
+
+
   if (loading) {
     return (
       <div className="cultural-card p-8 relative">
@@ -138,16 +141,16 @@ const QuizTab = ({ suktaId, onQuizComplete }) => {
         ))}
         <div className="relative z-10">
           <div className="text-6xl mb-6 om-glow">🧠</div>
-          <h3 className="text-2xl font-bold gradient-text mb-4">Test Your Knowledge</h3>
+          <h3 className="text-2xl font-bold gradient-text mb-4">{lang==='en'?'Test Your Knowledge':'ज्ञानं परीक्षस्व'}</h3>
           <p className="text-temple-700 mb-6 text-lg">
-            Challenge yourself with AI-generated questions about this sacred sukta
+            {lang === 'en'?'Challenge yourself with AI-generated questions about this sacred sukta':'अस्य पवित्रस्य सूक्तस्य विषये कृत्रिमबुद्ध्या निर्मितैः प्रश्नैः स्वं परीक्षस्व'}
           </p>
           <button
             onClick={generateQuiz}
             className="bg-gradient-to-r from-vedic-500 to-sacred-500 text-white px-8 py-4 rounded-xl hover:from-vedic-600 hover:to-sacred-600 transition-all duration-300 shadow-cultural hover:shadow-glow transform hover:scale-105 flex items-center gap-3 mx-auto"
           >
             <Brain className="w-5 h-5" />
-            Generate Quiz
+            {lang === 'en'?'Generate Quiz':'प्रश्नमाला निर्मातुम्'}
           </button>
           <div className="flex justify-center space-x-4 mt-6 text-2xl">
             <span className="animate-bounce-gentle">🪷</span>

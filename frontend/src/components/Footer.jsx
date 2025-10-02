@@ -48,7 +48,17 @@ const Footer = () => {
             <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-gold-400/20">
               <p className="text-sm leading-relaxed">
                 <span className="text-gold-300 font-semibold">Sanskrit Text:</span> VedaWeb (Universität zu Köln) • 
-                <span className="text-gold-300 font-semibold"> English Translation:</span> R.T.H. Griffith (1896) — Public Domain
+                <span className="text-gold-300 font-semibold">English Translation:</span> 
+                <a
+                  href="https://www.sacred-texts.com/hin/rigveda/index.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-red-500 hover:text-red-600 underline transition-colors duration-200"
+                  style={{ filter: 'brightness(1.3)' }}
+                >
+                  : R.T.H. Griffith (1896) — Public Domain
+                </a>
+                
               </p>
               <p className="text-sm leading-relaxed mt-2">
                 <span className="text-gold-300 font-semibold">AI Summaries:</span> Generated for demonstration • 

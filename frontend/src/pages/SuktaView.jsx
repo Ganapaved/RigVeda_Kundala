@@ -24,6 +24,7 @@ const translations = {
       sanskrit: "Sanskrit",
       summary: "Summary",
       visualization: "Visualization",
+      quiz: "Quiz",
     },
     loading: "Loading Sacred Sukta...",
     loadingSub: "Preparing divine verses for your spiritual journey",
@@ -43,6 +44,7 @@ const translations = {
       sanskrit: "संस्कृतम्",
       summary: "सारः",
       visualization: "दृश्यरूपम्",
+      quiz: "प्रश्नोत्तरी",
     },
     loading: "पवित्रसूक्तं लोड् क्रियते...",
     loadingSub: "भवतः आध्यात्मिकयात्रायै दिव्यश्लोकाः सज्जीक्रियन्ते",
@@ -51,6 +53,7 @@ const translations = {
     summaryGenText: "अस्य सूक्तस्य कृत्रिमबुद्ध्या उत्पादितः सारः",
     summaryTitle: "दिव्यसारः",
     quote: "सत्यं ज्ञानमनन्तं ब्रह्म",
+
   },
 };
 
@@ -205,7 +208,7 @@ const SuktaView = () => {
     { id: 'sanskrit', label: t.tabs.sanskrit, icon: '🕉️', color: 'from-vedic-500 to-sacred-500' },
     { id: 'summary', label: t.tabs.summary, icon: '📝', color: 'from-lotus-500 to-temple-500' },
     { id: 'visualization', label: t.tabs.visualization, icon: '📊', color: 'from-gold-500 to-saffron-600' },
-    { id: 'quiz', label: 'Quiz', icon: '🧠', color: 'from-purple-500 to-indigo-600' },
+    { id: 'quiz', label: t.tabs.quiz, icon: '🧠', color: 'from-purple-500 to-indigo-600' },
   ];
 
   const LangToggle = ()=>(
@@ -624,7 +627,7 @@ const SuktaView = () => {
           {activeTab === 'quiz' && (
             <>
               {!quizResults ? (
-                <QuizTab suktaId={id} onQuizComplete={handleQuizComplete} />
+                <QuizTab suktaId={id} onQuizComplete={handleQuizComplete} lang />
               ) : (
                 <QuizResult results={quizResults} onRetakeQuiz={handleRetakeQuiz} />
               )}
