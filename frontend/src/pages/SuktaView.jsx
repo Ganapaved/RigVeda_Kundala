@@ -8,6 +8,8 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import VisualizationTab from '../components/VisualizationTab';
 import ReactMarkdown from 'react-markdown';
+import QuizResult from '../components/QuixResult';
+import QuizTab from '../components/QuizTab';
 
 
 const translations = {
@@ -111,6 +113,7 @@ const SuktaView = () => {
   const [summary, setSummary] = useState('');
   const [loadingSummary, setLoadingSummary] = useState(false);
   const [lang, setLang] = useState('en'); // toggle language
+  const [quizResults, setQuizResults] = useState(null);
 
   const t = translations[lang];
 
@@ -191,6 +194,14 @@ const SuktaView = () => {
     }
   };
 
+  const handleQuizComplete = (results) => {
+    setQuizResults(results);
+  };
+
+  const handleRetakeQuiz = () => {
+    setQuizResults(null);
+  };
+
   useEffect(() => {
     fetchSukta();
   }, [id]);
@@ -200,6 +211,7 @@ const SuktaView = () => {
     { id: 'sanskrit', label: t.tabs.sanskrit, icon: '🕉️', color: 'from-vedic-500 to-sacred-500' },
     { id: 'summary', label: t.tabs.summary, icon: '📝', color: 'from-lotus-500 to-temple-500' },
     { id: 'visualization', label: t.tabs.visualization, icon: '📊', color: 'from-gold-500 to-saffron-600' },
+    { id: 'quiz', label: 'Quiz', icon: '🧠', color: 'from-purple-500 to-indigo-600' },
   ];
 
   const LangToggle = ()=>(
@@ -212,6 +224,13 @@ const SuktaView = () => {
 
       </button>
   );
+
+  function formatNumber(num,lang) {
+    if(lang === 'sa'){
+      return new Intl.NumberFormat('hi-IN-u-nu-deva').format(num);
+    }
+    return num;
+  }
 
   if (loading) {
     return (
@@ -336,7 +355,7 @@ const SuktaView = () => {
               <div className="bg-gold-50 p-4 rounded-xl border-2 border-gold-200 text-center">
                 <BookOpen className="w-8 h-8 text-gold-600 mx-auto mb-2" />
                 <div className="text-sm text-temple-600 font-medium">{t.verses}</div>
-                <div className="text-xl font-bold text-gold-700">{sukta.mantras.length}</div>
+                <div className="text-xl font-bold text-gold-700">{formatNumber(sukta.mantras.length,lang)}</div>
               </div>
             </div>
           </div>
@@ -574,7 +593,7 @@ const SuktaView = () => {
                       <div className="text-4xl om-glow">🕉️</div>
                     </div>
                     <h3 className="text-2xl font-bold gradient-text mb-6 text-center">
-                      Divine Summary
+                      {t.summaryTitle}
                     </h3>
                     <div className="bg-gradient-to-r from-saffron-50 to-lotus-50 p-6 rounded-xl border-2 border-gold-200" style={{ position: 'relative' }}>
 
@@ -606,6 +625,17 @@ const SuktaView = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Quiz Tab */}
+          {activeTab === 'quiz' && (
+            <>
+              {!quizResults ? (
+                <QuizTab suktaId={id} onQuizComplete={handleQuizComplete} />
+              ) : (
+                <QuizResult results={quizResults} onRetakeQuiz={handleRetakeQuiz} />
+              )}
+            </>
+          )}
 
       {/* Sacred Quote */}
       <animated.div

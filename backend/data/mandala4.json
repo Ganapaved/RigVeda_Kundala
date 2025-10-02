@@ -3,82 +3,366 @@
   "suktas": [
     {
       "sukta": 1,
-      "deity": "Agni",
-      "rishi": "Vamadeva",
+      "deity_english": "Agni, Varuṇa, Maruts, Sūrya, Ushas",
+      "deity_sanskrit": "अग्नि, वरुण, मरुतः, सूर्य, उषस्",
+      "rishi_english": "Vāmadeva Gautama",
+      "rishi_sanskrit": "वामदेव गौतम",
       "mantras": [
         {
           "verse": 1,
-          "sanskrit_devanagari": "त्वां हि अग्ने सदमित् समन्यवो होत्रा देवेष्विजते यजन्ति",
-          "sanskrit_iast": "tvāṃ hí agne sádamit samanyávo hotrā́ devéṣv ijate yájanti",
-          "english_griffith": "Agni, we invoke thee, Lord of sacrifice, bounteous giver, who knowest all generations. Thou art the Priest men choose to worship all the Gods."
+          "sanskrit_devanagari": "त्वां ह्य अग्ने सदम इत समन्यवो देवासो देवम अरतिं नयेरिर इति करत्वा नयेरिरे | अमर्त्यं यजतं मर्त्येष्व आ देवम आदेवं जनत प्रचेतसं विश्वम आदेवं जनत प्रचेतसम ||",
+          "sanskrit_iast": "tvāṃ hy aghne sadam it samanyavo devāso devam aratiṃ nyerira iti kratvā nyerire | amartyaṃ yajata martyeṣv ā devam ādevaṃ janata pracetasaṃ viśvam ādevaṃ janata pracetasam ||",
+          "english_griffith": "THEE Agni, have the Gods, ever of one accord, sent hither down, a God, appointed messenger, yea, with their wisdom sent thee down. The Immortal, O thou Holy One, mid mortal men, the God-devoted God, the wise, have they brought forth, brought forth the omnipresent God-devoted Sage."
         },
         {
           "verse": 2,
-          "sanskrit_devanagari": "त्वं होता मनुषो निषेदिवान् यज्ञैरग्ने याहि वीतये",
-          "sanskrit_iast": "tváṃ hotā́ manuṣo niṣedivā́n yajñáir agne yāhi vītáye",
-          "english_griffith": "Thou art the Priest appointed, Agni, who through generations hast purified thy body. Come, thou who knowest all things, to our worship."
+          "sanskrit_devanagari": "स भरातरं वरुणम अग्न आ वव्र्त्स्व देवां अछा सुमती यज्ञवनसं जयेष्ठं यज्ञवनसम | रतावानम आदित्यं चर्षणीध्र्तं राजानं चर्षणीध्र्तम ||",
+          "sanskrit_iast": "sa bhrātaraṃ varuṇam aghna ā vavṛtsva devāṃ achā sumatī yajñavanasaṃ jyeṣṭhaṃ yajñavanasam | ṛtāvānam ādityaṃ carṣaṇīdhṛtaṃ rājānaṃ carṣaṇīdhṛtam ||",
+          "english_griffith": "As such, O Agni, bring with favour to the Gods thy Brother Varuṇa who loveth sacrifice, True to the Law, the Āditya who supporteth men, the King, supporter of mankind."
         },
         {
           "verse": 3,
-          "sanskrit_devanagari": "उप त्वाग्ने दिवेदिवे दोषावस्तर्धिया वयम्। नमो भरन्त एमसि",
-          "sanskrit_iast": "úpa tvāgne divedíve doṣāvástar dhíyā vayám. námo bharanta emasi",
-          "english_griffith": "We approach thee, Agni, day by day, bearing our thoughts to thee at dawn and dusk. We come bringing reverence unto thee."
-        }
-      ]
-    },
-    {
-      "sukta": 2,
-      "deity": "Agni",
-      "rishi": "Vamadeva",
-      "mantras": [
-        {
-          "verse": 1,
-          "sanskrit_devanagari": "पुरो हि अग्ने अर्चिषा सहस्व सहस्राणि शत्रून् रक्षो गणान् च",
-          "sanskrit_iast": "púro hí agne arciṣā́ sahasva sahásrāṇi śatrū́n rakṣo gaṇā́ṃś ca",
-          "english_griffith": "In front, O Agni, go with flame, and burn the thousands of enemies and demons. Protect us with thy light from all harm."
-        },
-        {
-          "verse": 2,
-          "sanskrit_devanagari": "त्वमग्ने रुद्रो असुर महो दिवः त्वं शर्धो मारुतं पृक्ष ईशिषे",
-          "sanskrit_iast": "tvám agne rudrá asura mahó diváḥ tváṃ śárdho mārutaṃ pṛkṣa ī́śiṣe",
-          "english_griffith": "Thou, Agni, art Rudra, the mighty one of heaven. Thou art the host of Maruts, and thou rulest over food."
-        },
-        {
-          "verse": 3,
-          "sanskrit_devanagari": "त्वमर्यमा वरुणो जातवेदस् त्वं मित्रो भवसि दम्पते गृहे",
-          "sanskrit_iast": "tvám aryamā́ váruṇo jātavedas tváṃ mitró bhavasi dampáte gṛhe",
-          "english_griffith": "Thou art Aryaman and Varuna, O Jatavedas. Thou art Mitra when thou becomest lord of the house."
+          "sanskrit_devanagari": "सखे सखायम अभ्य आ वव्र्त्स्वाशुं न चक्रं रथ्येव रंह्यास्मभ्यं दस्म रंह्या | अग्ने मर्ळीकं वरुणे सचा विदो मरुत्सु विश्वभानुषु तोकाय तुजे शुशुचान शं कर्ध्य अस्मभ्यं दस्म शं कर्धि ||",
+          "sanskrit_iast": "sakhe sakhāyam abhy ā vavṛtsvāśuṃ na cakraṃ rathyeva raṃhyāsmabhyaṃ dasma raṃhyā | aghne mṛḷīkaṃ varuṇe sacā vido marutsu viśvabhānuṣu tokāya tuje śuśucāna śaṃ kṛdhy asmabhyaṃ dasma śaṃ kṛdhi ||",
+          "english_griffith": "Do thou, O Friend, turn hither him who is our Friend, swift as a wheel, like two car-steeds in rapid course, Wondrous! to us in rapid course. O Agni, find thou grace for us with Varuṇa, with Maruts who illumine all. Bless us, thou Radiant One, for seed and progeny, yea, bless us, O thou Wondrous God."
         },
         {
           "verse": 4,
-          "sanskrit_devanagari": "त्वामिन्द्रं मरुतः सं हि गुर्भिरे त्वां विष्णुं वृषभं कल्पयन्ति",
-          "sanskrit_iast": "tvām índraṃ marútaḥ saṃ hí gur bhíre tvāṃ víṣṇuṃ vṛṣabhám kalpayanti",
-          "english_griffith": "The Maruts embrace thee as Indra with their songs. They fashion thee as Vishnu, the mighty bull."
+          "sanskrit_devanagari": "तवं नो अग्ने वरुणस्य विद्वान देवस्य हेळो ऽव यासिसीष्ठाः | यजिष्ठो वह्नितमः शोशुचानो विश्वा दवेषांसि पर मुमुग्ध्य अस्मत ||",
+          "sanskrit_iast": "tvaṃ no aghne varuṇasya vidvān devasya heḷo 'va yāsisīṣṭhāḥ | yajiṣṭho vahnitamaḥ śośucāno viśvā dveṣāṃsi pra mumughdhy asmat ||",
+          "english_griffith": "Do thou who knowest Varuṇa, O Agni, put far away from us the God's displeasure. Best Sacrificer, brightest One, refulgent remove thou far from us all those who hate us."
+        },
+        {
+          "verse": 5,
+          "sanskrit_devanagari": "स तवं नो अग्ने ऽवमो भवोती नेदिष्ठो अस्या उषसो वयुष्टौ | अव यक्ष्व नो वरुणं रराणो वीहि मर्ळीकं सुहवो न एधि ||",
+          "sanskrit_iast": "sa tvaṃ no aghne 'vamo bhavotī nediṣṭho asyā uṣaso vyuṣṭau | ava yakṣva no varuṇaṃ rarāṇo vīhi mṛḷīkaṃ suhavo na edhi ||",
+          "english_griffith": "Be thou, O Agni, nearest us with succour, our closest Friend while now this Morn is breaking. Reconcile to us Varuṇa, be bounteous enjoy the gracious juice; be swift to hear us."
+        },
+        {
+          "verse": 6,
+          "sanskrit_devanagari": "अस्य शरेष्ठा सुभगस्य संद्र्ग देवस्य चित्रतमा मर्त्येषु | शुचि घर्तं न तप्तम अघ्न्याया सपार्हा देवस्य मंहनेव धेनोः ||",
+          "sanskrit_iast": "asya śreṣṭhā subhaghasya saṃdṛgh devasya citratamā martyeṣu | śuci ghṛtaṃ na taptam aghnyāyā spārhā devasya maṃhaneva dhenoḥ ||",
+          "english_griffith": "Excellent is the glance, of brightest splendour, which the auspicious God bestows on mortals- The God's glance, longed-for even as the butter, pure, heated, of the cow, the milch-cow's bounty."
+        },
+        {
+          "verse": 7,
+          "sanskrit_devanagari": "तरिर अस्य ता परमा सन्ति सत्या सपार्हा देवस्य जनिमान्य अग्नेः | अनन्ते अन्तः परिवीत आगाच छुचिः शुक्रो अर्यो रोरुचानः ||",
+          "sanskrit_iast": "trir asya tā paramā santi satyā spārhā devasya janimāny aghneḥ | anante antaḥ parivīta āghāc chuciḥ śukro aryo rorucānaḥ ||",
+          "english_griffith": "Three are those births, the true, the most exalted, eagerly longed-for, of the God, of Agni. He came invested in the boundless region, pure, radiant, friendly, mightily resplendent."
+        },
+        {
+          "verse": 8,
+          "sanskrit_devanagari": "स दूतो विश्वेद अभि वष्टि सद्मा होता हिरण्यरथो रंसुजिह्वः | रोहिदश्वो वपुष्यो विभावा सदा रण्वः पितुमतीव संसत ||",
+          "sanskrit_iast": "sa dūto viśved abhi vaṣṭi sadmā hotā hiraṇyaratho raṃsujihvaḥ | rohidaśvo vapuṣyo vibhāvā sadā raṇvaḥ pitumatīva saṃsat ||",
+          "english_griffith": "This envoy joyeth in all seats of worship, borne on his golden car, sweet-tongued Invoker: Lovely to look on, with red steeds, effulgent, like a feast rich in food, joyous for ever."
+        },
+        {
+          "verse": 9,
+          "sanskrit_devanagari": "स चेतयन मनुषो यज्ञबन्धुः पर तम मह्या रशनया नयन्ति | स कषेत्य अस्य दुर्यासु साधन देवो मर्तस्य सधनित्वम आप ||",
+          "sanskrit_iast": "sa cetayan manuṣo yajñabandhuḥ pra tam mahyā raśanayā nayanti | sa kṣety asya duryāsu sādhan devo martasya sadhanitvam āpa ||",
+          "english_griffith": "Allied by worship, let him give man knowledge: by an extended cord they lead him onward. He stays, effectual in this mortal's dwelling, and the God wins a share in his possessions."
+        },
+        {
+          "verse": 10,
+          "sanskrit_devanagari": "स तू नो अग्निर नयतु परजानन्न अछा रत्नं देवभक्तं यद अस्य | धिया यद विश्वे अम्र्ता अक्र्ण्वन दयौष पिता जनिता सत्यम उक्षन ||",
+          "sanskrit_iast": "sa tū no aghnir nayatu prajānann achā ratnaṃ devabhaktaṃ yad asya | dhiyā yad viśve amṛtā akṛṇvan dyauṣ pitā janitā satyam ukṣan ||",
+          "english_griffith": "Let Agni -for he knows the way- conduct us to all that he enjoys of God-sent riches, What all the Immortals have prepared with wisdom, Dyaus, Sire, Begetter, raining down true blessings."
+        },
+        {
+          "verse": 11,
+          "sanskrit_devanagari": "स जायत परथमः पस्त्यासु महो बुध्ने रजसो अस्य योनौ | पर शर्ध आर्त परथमं विपन्यं रतस्य योना वर्षभस्य नीळे ||",
+          "sanskrit_iast": "sa jāyata prathamaḥ pastyāsu maho budhne rajaso asya yonau | pra śardha ārta prathamaṃ vipanyaṃ ṛtasya yonā vṛṣabhasya nīḷe ||",
+          "english_griffith": "In houses first he sprang into existence, at great heaven's base, and in this region's bosom; Footless and headless, both his ends concealing, in his Bull's lair drawing himself together."
+        },
+        {
+          "verse": 12,
+          "sanskrit_devanagari": "सपार्हो युवा वपुष्यो विभावा सप्त परियासो ऽजनयन्त वर्ष्णे | अस्माकम अत्र पितरो मनुष्या अभि पर सेदुर रतम आशुषाणाः ||",
+          "sanskrit_iast": "spārho yuvā vapuṣyo vibhāvā sapta priyāso 'janayanta vṛṣṇe | asmākam atra pitaro manuṣyā abhi pra sedur ṛtam āśuṣāṇāḥ ||",
+          "english_griffith": "Wondrously first he rose aloft, defiant, in the Bull's lair, the home of holy Order, Longed-for, young, beautiful, and far-resplendent: and seven dear friends sprang up unto the Mighty."
+        },
+        {
+          "verse": 13,
+          "sanskrit_devanagari": "अश्मव्रजाः सुदुघा वव्रे अन्तर उद उस्रा आजन्न उषसो हुवानाः ||",
+          "sanskrit_iast": "aśmavrajāḥ sudughā vavre antara ud usrā ājann uṣaso huvānāḥ ||",
+          "english_griffith": "Here did our human fathers take their places, fain to fulfil the sacred Law of worship. Forth drave they, with loud call, the offering: bright was the morn which they beheld."
+        },
+        {
+          "verse": 14,
+          "sanskrit_devanagari": "यथैषा रत्नभवती मर्त्येषु ता तु ववृता मर्त्येषु विश्वा | ये देवा ववृता ऋते जाताः सखाया रत्ना अत्र यजते ||",
+          "sanskrit_iast": "yathaīṣā ratnabhavatī martyeṣu tā tu vavṛtā martyeṣu viśvā | ye devā vavṛtā ṛte jātāḥ sakhāyā ratnā atra yajate ||",
+          "english_griffith": "Even as those treasures, that abide with mortals, have been secured, so have the Gods prepared them for their worship. Forthwith the Gods have come together, and made them shine as jewels."
+        },
+        {
+          "verse": 15,
+          "sanskrit_devanagari": "अग्ने वरुणस्सखे वव्र्त्स्व देवेषु जुष्टे रत्नं यद अस्य | स्वाहा विश्वभानुष्व ब्रह्मणा वावृते यजते ||",
+          "sanskrit_iast": "agne varuṇassakhe vavṛtsva deveṣu juṣṭe ratnaṃ yad asya | svāhā viśvabhānuṣva brahmaṇā vāvr̥te yajate ||",
+          "english_griffith": "Agni, O Friend of Varuṇa, bring to us the treasure that is in the Gods’ keeping. To the all-shining God, we offer worship with sacrifice."
+        },
+        {
+          "verse": 16,
+          "sanskrit_devanagari": "स तु नो अग्ने वरुणस्य विद्वान देवस्य हेळो ऽव यासिसीष्ठाः | यजिष्ठो वह्नितमः शोशुचानो विश्वा दवेषांसि पर मुमुग्ध्य अस्मत ||",
+          "sanskrit_iast": "sa tu no aghne varuṇasya vidvān devasya heḷo 'va yāsisīṣṭhāḥ | yajiṣṭho vahnitamaḥ śośucāno viśvā dveṣāṃsi pra mumughdhy asmat ||",
+          "english_griffith": "O Agni, thou who knowest Varuṇa, do thou put far away from us the wrath of the God. Brightest and best of sacrificers, dispeller of hate, be gracious to us."
+        },
+        {
+          "verse": 17,
+          "sanskrit_devanagari": "स तु नो अग्ने वरुणस्य विद्वान देवस्य हेळो ऽव यासिसीष्ठाः | यजिष्ठो वह्नितमः शोशुचानो विश्वा दवेषांसि पर मुमुग्ध्य अस्मत ||",
+          "sanskrit_iast": "sa tu no aghne varuṇasya vidvān devasya heḷo 'va yāsisīṣṭhāḥ | yajiṣṭho vahnitamaḥ śośucāno viśvā dveṣāṃsi pra mumughdhy asmat ||",
+          "english_griffith": "This Agni, wise in the ways of Varuṇa, who is the best of sacrificers, may banish all hostile thoughts from us."
+        },
+        {
+          "verse": 18,
+          "sanskrit_devanagari": "अस्माकं पितरः सत्यं रतम आशुना यजन्त | विश्वा दवेषांसि पर मुमुग्ध्य अस्मत ||",
+          "sanskrit_iast": "asmākaṃ pitaraḥ satyaṃ ṛtam āśunā yajanta | viśvā dveṣāṃsi pra mumughdhy asmat ||",
+          "english_griffith": "Our fathers have indeed, with truth, worshipped the Law with swiftness; and all their enmities they have removed."
+        },
+        {
+          "verse": 19,
+          "sanskrit_devanagari": "स तु नो अग्ने वरुणस्य विद्वान देवस्य हेळो ऽव यासिसीष्ठाः | यजिष्ठो वह्नितमः शोशुचानो विश्वा दवेषांसि पर मुमुग्ध्य अस्मत ||",
+          "sanskrit_iast": "sa tu no aghne varuṇasya vidvān devasya heḷo 'va yāsisīṣṭhāḥ | yajiṣṭho vahnitamaḥ śośucāno viśvā dveṣāṃsi pra mumughdhy asmat ||",
+          "english_griffith": "Agni, bring to us with favour all the gifts of the Gods, even the treasures of Varuṇa and the radiant Maruts."
+        },
+        {
+          "verse": 20,
+          "sanskrit_devanagari": "स तु नो अग्ने वरुणस्य विद्वान देवस्य हेळो ऽव यासिसीष्ठाः | यजिष्ठो वह्नितमः शोशुचानो विश्वा दवेषांसि पर मुमुग्ध्य अस्मत ||",
+          "sanskrit_iast": "sa tu no aghne varuṇasya vidvān devasya heḷo 'va yāsisīṣṭhāḥ | yajiṣṭho vahnitamaḥ śośucāno viśvā dveṣāṃsi pra mumughdhy asmat ||",
+          "english_griffith": "Thus let Agni, the wise one, favour us, and put far away all enmity; the god devoted to sacrifice is our friend."
         }
       ]
     },
     {
-      "sukta": 3,
-      "deity": "Agni",
-      "rishi": "Vamadeva", 
+      "mandala": 4,
+      "sukta": 14,
+      "deity_english": "Agni, Savitar, Ashvins, Ushas, Surya",
+      "deity_sanskrit": "अग्नि, सवितृ, अश्विनौ, उषस्, सूर्य",
+      "rishi_english": "Vāmadeva Gautama",
+      "rishi_sanskrit": "वामदेव गौतम",
       "mantras": [
         {
           "verse": 1,
-          "sanskrit_devanagari": "कविं काव्येन कवयो नि पाहि ब्रह्मणा ब्राह्मणम् राजन्यमुग्रम्",
-          "sanskrit_iast": "kavíṃ kāvyéna kavayo ní pāhi brahmaṇā́ brāhmaṇám rājanyám ugram",
-          "english_griffith": "Thou art the poet, protect the poet with thy poem. With sacred formula protect the Brahman and the fierce warrior."
+          "sanskrit_devanagari": "यो मर्त्येष्व अम्र्त रतावा देवो देवेष्व अरतिर निधायि | होता यजिष्ठो मह्ना शुचध्यै हव्यैर अग्निर मनुष ईरयध्यै ||",
+          "sanskrit_iast": "yo martyeṣv amṛta ṛtāvā devo deveṣv aratir nidhāyi | hotā yajiṣṭho mahnā śucadhyai havyair aghnir manuṣa īrayadhyai ||",
+          "english_griffith": "The Faithful One, Immortal among mortals, a God among the Gods, appointed envoy, Priest, best at worship, must shine forth in glory. Agni shall be raised high with man's oblations."
         },
         {
           "verse": 2,
-          "sanskrit_devanagari": "विश्वा अग्ने अभि चक्षे जनांसि विश्वानि त्वं जातवेदो नामानि",
-          "sanskrit_iast": "viśvā́ agne abhí cakṣe janāṃsi viśvā́ni tvám jātavedo nā́māni",
-          "english_griffith": "All people, Agni, thou dost see around thee. All names thou knowest, O thou who knowest all births."
+          "sanskrit_devanagari": "इह तवं सूनो सहसो नो अद्य जातो जातां उभयां अन्तर अग्ने | दूत ईयसे युयुजान रष्व रजुमुष्कान वर्षणः शुक्रांश च ||",
+          "sanskrit_iast": "iha tvaṃ sūno sahaso no adya jāto jātāṃ ubhayāṃ antar aghne | dūta īyase yuyujāna ṛṣva ṛjumuṣkān vṛṣaṇaḥ śukrāṃś ca ||",
+          "english_griffith": "Born for us here this day, O Son of Vigour, between both races of born beings, Agni, thou farest as an envoy, having harnessed, Sublime One! thy strong-muscled radiant stallions."
         },
         {
           "verse": 3,
-          "sanskrit_devanagari": "त्वं दूतो अग्ने अमर्त्यो भूर् मर्त्येषु मानुषेषु",
-          "sanskrit_iast": "tvám dūto agne amartyo bhūr martyeṣu mānuṣeṣu",
-          "english_griffith": "Thou art the immortal messenger, Agni, among mortal men. Thou art the bearer of our offerings."
+          "sanskrit_devanagari": "अत्या वर्धस्नू रोहिता घर्तस्नू रतस्य मन्ये मनसा जविष्ठा | अन्तर ईयसे अरुषा युजानो युष्मांश च देवान विश आ च मर्तान ||",
+          "sanskrit_iast": "atyā vṛdhasnū rohitā ghṛtasnū ṛtasya manye manasā javiṣṭhā | antar īyase aruṣā yujāno yuṣmāṃś ca devān viśa ā ca martān ||",
+          "english_griffith": "I laud the ruddy steeds who pour down blessing, dropping oil, fleet through the thoualit of Order. Yoking red horses to and fro thou goest between the Deities and mortal races."
+        },
+        {
+          "verse": 4,
+          "sanskrit_devanagari": "अर्यमणं वरुणमित्रमेषामिन्द्राविष्णूमरुतोअश्विनोत | सवश्वोअग्ने सुरथः सुराधा एदुवहसहविषेजनाय ||",
+          "sanskrit_iast": "aryamaṇaṃ varuṇam mitram eṣām indrāviṣṇū maruto aśvinota | svaśvo aghne surathaḥ surādhā edu vaha suhaviṣe janāya ||",
+          "english_griffith": "Aryaman, Mitra, Varuṇa, and Indra with Viṣṇu, of the Gods, Maruts and Aśvins — these, Agni, with good car and steeds, bring hither, most bountiful, to folk with fair oblations."
+        },
+        {
+          "verse": 5,
+          "sanskrit_devanagari": "गोमांअग्नेऽविमाश्वी यज्ञो नर्वत्सखा सदमिद अप्र्म्ष्यः | इळावां एषोअसुर प्रजावान दीर्घोरयिः पर्थुबुध्नः सभावान ||",
+          "sanskrit_iast": "gomāṃ aghne 'vimā śvī yajño nṛvatsakhā sadam ida apramṛṣyaḥ | iḷāvāṃ eṣo asura prajāvān dīrgho rayiḥ pṛthubudhnaḥ sabhāvān ||",
+          "english_griffith": "Agni, be this our sacrifice eternal, with brave friends, rich in kine and sheep and horses, rich, Asura! in sacred food and children, in full assembly, wealth broad-based and enduring."
+        },
+        {
+          "verse": 6,
+          "sanskrit_devanagari": "यसतिध्मं जभरत सिष्विदानो मूर्धानं वा ततपते त्वया | भुवस्तस्य सवतः पायुरअग्ने विश्वस्मात्सीमअघायतुरुष्य ||",
+          "sanskrit_iast": "yas tidhmaṃ jabharat siṣvidāno mūrdhānaṃ vā tatapate tvayā | bhuvas tasya savataḥ pāyur aghne viśvasmāt sīm aghāyatur uruṣya ||",
+          "english_griffith": "The man who, sweating, brings for thee the fuel, and makes his head to ache, thy faithful servant, — Agni, to him be a self-strong Protector; guard him from all who seek to do him mischief."
+        },
+        {
+          "verse": 7,
+          "sanskrit_devanagari": "यसतेभरादन्नियते चिदन्नंनिशिषनमन्द्रमतिथिमुदीरत | आदेवयुरिनधतेदुरोणे तस्मिनरयिर्ध्रुवोअस्तुदास्वान ||",
+          "sanskrit_iast": "yas te bharād anniyate cid annaṃ niśiṣan mandram atithim udīrat | ā devayur inadhate duroṇe tasmin rayir dhruvo astu dāsvān ||",
+          "english_griffith": "Who brings thee food, though thou hast food in plenty, welcomes his cheerful guest and speeds him onward, who kindles thee devoutly in his dwelling — to him be wealth secure and freely giving."
+        },
+        {
+          "verse": 8,
+          "sanskrit_devanagari": "यस त्वा दोषा य उषसि परशंसात परियं वा त्वा कर्णवते हविष्मान | अश्वो न सवे दम आ हेम्यावान तम अंहसः पीपरो दाश्वांसम ||",
+          "sanskrit_iast": "yas tvā doṣā ya uṣasi praśaṃsāt priyaṃ vā tvā kṛṇavate haviṣmān | aśvo na sve dama ā hemyāvān tam aṃhasaḥ pīparo dāśvāṃsam ||",
+          "english_griffith": "Whoso sings praise to thee at eve or morning, and, with oblation, doth the thing thou lovest — in his own home, even as a gold-girt courser, rescue him from distress, the bounteous giver."
+        },
+        {
+          "verse": 9,
+          "sanskrit_devanagari": "यस तुभ्यमग्ने अम्र्ताय दाशदुवस त्वे कर्णवते यतस्रुक | न स राया शशमानो वि योषन नैनम अंहः परि वरद अघायोः ||",
+          "sanskrit_iast": "yas tubhyam aghne amṛtāya dāśad duvas tve kṛṇavate yatasruk | na sa rāyā śaśamāno vi yoṣan nainam aṃhaḥ pari varad aghāyoḥ ||",
+          "english_griffith": "Whoso brings gifts to thee Immortal, Agni, and doth thee service with uplifted ladle, let him not, sorely toiling, lose his riches; let not the sinner's wickedness enclose him."
+        },
+        {
+          "verse": 10,
+          "sanskrit_devanagari": "यस्य तवमग्ने अध्वरं जुजोषो देवो मर्तस्य सुधितं रराणः | परीतेद असद धोत्रा सा यविष्ठासाम यस्य विधतो वर्धासः ||",
+          "sanskrit_iast": "yasya tvam aghne adhvaraṃ jujoṣo devo martasya sudhitaṃ rarāṇaḥ | prīted asad dhotrā sā yaviṣṭhāsāma yasya vidhato vṛdhāsaḥ ||",
+          "english_griffith": "Whose well-wrought worship thou acceptest, Agni, thou God a mortal's gift, thou liberal Giver, dear be his sacrifice to thee, Most Youthful! and may we strengthen him when he adores thee."
+        },
+        {
+          "verse": 11,
+          "sanskrit_devanagari": "चित्तिमअचित्तिं चिनवद्वि विद्वान पर्ष्ठेव वीता वर्जिनाचर्तान | राये च नः सवपत्याय देव दितिं च रास्वादितिम उरुष्य ||",
+          "sanskrit_iast": "cittim acittiṃ cinavad vi vidvān pṛṣṭheva vītā varjinā chartān | rāye ca naḥ svapatyāya deva ditiṃ ca rāsvāditim uruṣya ||",
+          "english_griffith": "May he who knows distinguish sense and folly of men, like straight and crooked backs of horses, lead us, O God, to wealth and noble offspring; keep penury afar and grant us plenty."
+        },
+        {
+          "verse": 12,
+          "sanskrit_devanagari": "कविं शशासुः कवयोऽदब्धा निधारयन्तोदुर्यास्व आयोः | अतस्तवं दर्श्यांअघ्ने एतानपद्भिः पश्येर अद्भुतां अर्य एवैः ||",
+          "sanskrit_iast": "kaviṃ śaśāsuḥ kavayo 'dabdhā nidhārayanto duryāsva āyoḥ | atas tvaṃ dṛśyāṃ aghne etān padbhiḥ paśyer adbhutāṃ arya evaiḥ ||",
+          "english_griffith": "This Sage the Sages, ne’er deceived, commanded, setting him down in dwellings of the living. Hence mayst thou, friendly God, with rapid footsteps behold the Gods, wonderful, fair to look on."
+        },
+        {
+          "verse": 13,
+          "sanskrit_devanagari": "तवमग्ने वाघते सुप्रणीतिः सुतसोमाय विधते यविष्ठ | रत्नं भर शशमानाय घर्ष्वे पर्थु शचन्द्रम अवसे चर्षणिप्राः ||",
+          "sanskrit_iast": "tvam aghne vāghate supraṇītiḥ sutasomāya vidhate yaviṣṭha | ratnaṃ bhara śaśamānāya ghṛṣve pṛthu ścandram avase carṣaṇiprāḥ ||",
+          "english_griffith": "Good guidance hast thou for the priest, O Agni, who, Youngest God! with outpoured Soma serves thee. Ruler of men, thou joyous God, bring treasure splendid and plentiful to aid the toiler."
+        },
+        {
+          "verse": 14,
+          "sanskrit_devanagari": "अधा ह यद वयम अग्ने तवाया पद्भिर हस्तेभिश्चक्र्मा तनूभिः | रथं न करन्तो अपसा भुरिजोर रतं येमुः सुध्य आशुषाणाः ||",
+          "sanskrit_iast": "adhā ha yad vayam aghne tavayā padbhir hastebhiś cakṛmā tanūbhiḥ | rathaṃ na karanto apasā bhurijor ṛtaṃ yemuḥ sudhya āśuṣāṇāḥ ||",
+          "english_griffith": "Now all that we, thy faithful servants, Agni, have done with feet, with hands, and with our bodies, the wise, with toil, the holy rite have guided, as those who frame a car with manual cunning."
+        },
+        {
+          "verse": 15,
+          "sanskrit_devanagari": "अधा मातुर उषसः सप्त विप्रा जायेमहि प्रथमा वेधसो नृण | दिवसपुत्रा अङगिरसो भवेमाद्रिं रुजेम धनिनं शुचन्तः ||",
+          "sanskrit_iast": "adhā mātur uṣasaḥ sapta viprā jāyemahi prathamā vedhaso nṝn | divasaputrā aṅgiraso bhavemādriṃ rujema dhaninaṃ śucantaḥ ||",
+          "english_griffith": "May we, seven sages first in rank, engender, from Dawn the Mother, men to be ordainers. May we, Aṅgirases, be sons of Heaven, and, radiant, burst the wealth-containing mountain."
+        },
+        {
+          "verse": 16,
+          "sanskrit_devanagari": "अधा यथा नः पितरः परासः परत्नासो अग्न रतम आशुषाणाः | शुचीद अयन दीधितिम उक्थशासः क्षामा भिन्दन्तो अरुणीर अप वरन ||",
+          "sanskrit_iast": "adhā yathā naḥ pitaraḥ parāsaḥ pratnāso aghna ṛtaṃ āśuṣāṇāḥ | śucīd ayana dīdhitim ukthaśāsaḥ kṣāmā bhindanto aruṇīr apa varan ||",
+          "english_griffith": "As in the days of old our ancient Fathers, speeding the work of holy worship, Agni, sought pure light and devotion, singing praises; they cleft the ground and made red Dawns apparent."
+        },
+        {
+          "verse": 17,
+          "sanskrit_devanagari": "सुकर्माणः सुरुचो देवयन्तोऽयो न देवा जनिमा धमन्तः | शुचन्तो अग्निं ववर्धन्त इन्द्रं ऊर्वं गव्यम परिषदन्तो अग्मन् ||",
+          "sanskrit_iast": "sukarmāṇaḥ suruco devayanto 'yo na devā janimā dhamantaḥ | śucanto aghniṃ vavṛdhanta indraṃ ūrvaṃ gavyam pariṣadanto aghman ||",
+          "english_griffith": "Gods, doing holy acts, devout, resplendent, smelting like ore their human generations, enkindling Agni and exalting Indra, they came encompassing the stall of cattle."
+        },
+        {
+          "verse": 18,
+          "sanskrit_devanagari": "आ यूथेव क्षुमति पश्वो अख्यद देवानां यज जनिमान्त्य उग्र | मर्तानां चिद उर्वशीः अक्र्प्रन वर्धे चिद अर्य उपरस्यायोः ||",
+          "sanskrit_iast": "ā yūtheva kṣumati paśvo akhyad devānāṃ yaj janimānty ughra | martānāṃ cid urvaśīḥ akṛpraṇa vṛdhe cid arya uparasyāyoḥ ||",
+          "english_griffith": "Strong One! he marked them—and the Gods before them—like herds of cattle in a foodful pasture. There they moaned forth their strong desire for mortals, to aid the True, the nearest One, the Living."
+        },
+        {
+          "verse": 19,
+          "sanskrit_devanagari": "अकर्म ते सवपसो अभूम रतम अवस्रन्न उषसो विभातीः | अनूनम अग्निम पुरुधा सुश्चन्द्रं देवस्य मर्म्जतश चारु चक्षुः ||",
+          "sanskrit_iast": "akarma te svapaso abhūma ṛtaṃ avasrann uṣaso vibhātīḥ | anūnam aghnim purudhā suścandraṃ devasya marmṛjataś cāru cakṣuḥ ||",
+          "english_griffith": "We have worked for thee, we have laboured nobly—bright Dawns have shed their light upon our worship—adding a beauty to the perfect Agni, and the God's beauteous eye that shines for ever."
+        },
+        {
+          "verse": 20,
+          "sanskrit_devanagari": "एता ते अग्न उचथानि वेधोऽवोचाम कवये ता जुषस्व | उच छोचस्व कर्णुहि वस्यसो नो महो रायः पुरुवार पर यन्धि ||",
+          "sanskrit_iast": "etā te aghna ucathāni vedho 'vocāma kavaye tā juṣasva | uc chocasva kṛṇuhi vasyaso no maho rāyaḥ puruvāra pra yandhi ||",
+          "english_griffith": "Agni, Disposer, we have sung these praises to thee the Wise: do thou accept them gladly. Blaze up on high and ever make us richer. Give us great wealth, O thou whose boons are many."
+        }
+      ]
+    },
+    {
+      "mandala": 4,
+      "sukta": 3,
+      "deity_english": "Agni, Rudra",
+      "deity_sanskrit": "अग्नि, रुद्र",
+      "rishi_english": "Vāmadeva Gautama",
+      "rishi_sanskrit": "वामदेव गौतम",
+      "mantras": [
+        {
+          "verse": 1,
+          "sanskrit_devanagari": "आ वो राजानम अध्वरस्य रुद्रं होतारं सत्ययजं रोदस्योः |\nअग्निम पुरा तनयित्नोर अचित्ताद धिरण्यरूपम अवसे कर्णुध्वम ||",
+          "sanskrit_iast": "ā vo rājānam adhvarasya rudraṃ hotāraṃ satyayajaṃ rodasyoḥ |\naghnim purā tanayitnor acittād dhiraṇyarūpam avase karṇudhvam ||",
+          "english_griffith": "WIN, to assist you, Rudra, Lord of worship, Priest of both worlds, effectual Sacrificer, Agni, invested with his golden colours, before the thunder strike and lay you senseless."
+        },
+        {
+          "verse": 2,
+          "sanskrit_devanagari": "अयं योनिश चक्र्मा यं वयं ते जायेव पत्य उशती सुवासाः |\nअर्वाचीनः परिवीतो नि षीदेमा उ ते सवपाक परतीचीः ||",
+          "sanskrit_iast": "ayaṃ yoniś cakṛmā yaṃ vayaṃ te jāyeva patya uśatī suvāsāḥ |\narvāchīnaḥ parivīto ni ṣīdemā u te svapāka pratīcīḥ ||",
+          "english_griffith": "This shrine have we made ready for thy coming, as the fond dame attires her for her husband."
+        },
+        {
+          "verse": 3,
+          "sanskrit_devanagari": "आश्र्ण्वते अद्र्पिताय मन्म नर्चक्षसे सुम्र्ळीकाय वेधः |\nदेवाय शस्तिम अम्र्ताय शंस गरावेव सोता मधुषुद यम ईळे ||",
+          "sanskrit_iast": "āśṛṇvate adṛpitāya manma nṛcakṣase sumṛḷīkāya vedhaḥ |\ndevāya śastim amṛtāya śaṃsa garāveva sotā madhuṣud yam īḷe ||",
+          "english_griffith": "A hymn, O Priest, to him who hears, the gentle, to him who looks on men, exceeding gracious."
+        },
+        {
+          "verse": 4,
+          "sanskrit_devanagari": "तवं चिन नः शम्या अग्ने अस्या रतस्य बोध्य रतचित सवाधीः |\nकदा त उक्था सधमाद्यानि कदा भवन्ति सख्या गर्हे ते ||",
+          "sanskrit_iast": "tvaṃ cin naḥ śamyā aghne asyā ṛtasya bodhya ṛtacit svādhīḥ |\nkadā ta ukthā sadhamādyāni kadā bhavanti sakhyā ghṛhe te ||",
+          "english_griffith": "Even as true knower of the Law, O Agni, to this our solemn rite be thou attentive."
+        },
+        {
+          "verse": 5,
+          "sanskrit_devanagari": "कथा ह तद वरुणाय तवम अग्ने कथा दिवे गर्हसे कन न आगः |\nकथा मित्राय मीळ्हुषे पर्थिव्यै बरवः कद अर्यम्णे कद भगाय ||",
+          "sanskrit_iast": "kathā ha tad varuṇāya tvam aghne kathā dive gharhase kan na āghaḥ |\nkathā mitrāya mīḷhuṣe pṛthivyai bravaḥ kad aryamṇe kad bhaghāya ||",
+          "english_griffith": "When shall thy songs of festival be sung thee? When is thy friendship shown within our dwelling?"
+        },
+        {
+          "verse": 6,
+          "sanskrit_devanagari": "कद धिष्ण्यासु वर्धसानो अग्ने कद वाताय परतवसे शुभंये |\nपरिज्मने नासत्याय कषे बरवः कद अग्ने रुद्राय नर्घ्ने ||",
+          "sanskrit_iast": "kad dhiṣṇyāsu vṛdhasāno aghne kad vātāya pratavase śubhaṃye |\nparijmane nāsatyāya kṣe bravaḥ kad aghne rudrāya nṛghne ||",
+          "english_griffith": "Why this complaint to Varuṇa, O Agni? And why to Heaven? for what is our transgression?"
+        },
+        {
+          "verse": 7,
+          "sanskrit_devanagari": "कथा महे पुष्टिम्भराय पूष्णे कद रुद्राय सुमखाय हविर्दे |\nकद विष्णव उरुगायाय रेतो बरवः कद अग्ने शरवे बर्हत्यै ||",
+          "sanskrit_iast": "kathā mahe puṣṭimbharāya pūṣṇe kad rudrāya sumakhāya havirde |\nkad viṣṇava urughāyāya reto bravaḥ kad aghne śarave bṛhatyai ||",
+          "english_griffith": "How wilt thou speak to Earth and bounteous Mitra? What wilt thou say to Aryaman and Bhaga?"
+        },
+        {
+          "verse": 8,
+          "sanskrit_devanagari": "कथा शर्धाय मरुताम रताय कथा सूरे बर्हते पर्छ्यमानः |\nपरति बरवो ऽदितये तुराय साधा दिवो जातवेदश चिकित्वान ||",
+          "sanskrit_iast": "kathā śardhāya marutām ṛtāya kathā sūre bṛhate pṛchyamānaḥ |\nprati bravo 'ditaye turāya sādhā divo jātavedaś cikitvān ||",
+          "english_griffith": "What, when thou blazest on the lesser altars, what to the mighty Wind who comes to bless us?"
+        },
+        {
+          "verse": 9,
+          "sanskrit_devanagari": "रतेन रतं नियतम ईळ आ गोर आमा सचा मधुमत पक्वम अग्ने |\nकर्ष्णा सती रुशता धासिनैषा जामर्येण पयसा पीपाय ||",
+          "sanskrit_iast": "ṛtena ṛtaṃ niyatam īḷa ā ghor āmā sacā madhumat pakvam aghne |\nkṛṣṇā satī ruśatā dhāsinaiṣā jāmaryeṇa payasā pīpāya ||",
+          "english_griffith": "Before the Free, before the Swift, defend us: fulfil heaven's work, all-knowing Jātavedas."
+        },
+        {
+          "verse": 10,
+          "sanskrit_devanagari": "रतेन हि षमा वर्षभश चिद अक्तः पुमां अग्निः पयसा पर्ष्ठ्य्न |\nअस्पन्दमानो अचरद वयोधा वर्षा शुक्रं दुदुहे पर्श्निर ऊधः ||",
+          "sanskrit_iast": "ṛtena hi ṣmā vṛṣabhaś cid aktaḥ pumāṃ aghniḥ payasā pṛṣṭhyna |\naspandamāno acarad vayodhā vṛṣā śukraṃ duduhe pṛśnir ūdhaḥ ||",
+          "english_griffith": "I crave the cow's true gift arranged by Order: though raw, she hath the sweet ripe juice, O Agni."
+        },
+        {
+          "verse": 11,
+          "sanskrit_devanagari": "रतेनाद्रिं वय असन भिदन्तः सम अङगिरसो नवन्त गोभिः |\nशुनं नरः परि षदन्न उषासम आविः सवर अभवज जाते अग्नौ ||",
+          "sanskrit_iast": "ṛtenādriṃ vya sana bhidantaḥ sam aṅgiraso navanta gobhiḥ |\nśunaṃ naraḥ pari ṣadann uṣāsam āviḥ svar abhavaj jāte aghnau ||",
+          "english_griffith": "Though she is black of hue with milk she teemeth, nutritious, brightly shining, all-sustaining."
+        },
+        {
+          "verse": 12,
+          "sanskrit_devanagari": "रतेन देवीर अम्र्ता अम्र्क्ता अर्णोभिर आपो मधुमद्भिर अग्ने |\nवाजी न सर्गेषु परस्तुभानः पर सदम इत सरवितवे दधन्युः ||",
+          "sanskrit_iast": "ṛtena devīr amṛtā amṛktā arṇobhir āpo madhumadbhir aghne |\nvājī na sargheṣu prastubhānaḥ pra sadam it sravitave dadhanyuḥ ||",
+          "english_griffith": "By Law the Immortal Goddesses the Waters, with meath-rich waves, O Agni, and uninjured."
+        },
+        {
+          "verse": 13,
+          "sanskrit_devanagari": "मा कस्य यक्षं सदम इद धुरो गा मा वेशस्य परमिनतो मापेः |\nमा भरातुर अग्ने अन्र्जोर रणं वेर मा सख्युर दक्षं रिपोर भुजेम ||",
+          "sanskrit_iast": "mā kasya yakṣaṃ sadam ida dhuro gā mā veśasya paraminato māpeḥ |\nmā bharātur aghne anṛjor raṇaṃ ver mā sakhyur dakṣaṃ ripor bhujema ||",
+          "english_griffith": "Go never to the feast of one who harms us, the treacherous neighbour or unworthy kinsman."
+        },
+        {
+          "verse": 14,
+          "sanskrit_devanagari": "रक्षा णो अग्ने तव रक्षणेभी रारक्षाणः सुमख परीणानः |\nपरति षफुर वि रुज वीड्व अंहो जहि रक्षो महि चिद वाव्र्धानम ||",
+          "sanskrit_iast": "rakṣā ṇo aghne tava rakṣaṇebhī rārakṣāṇaḥ sumakha parīṇānaḥ |\nprati ṣphura vi ruja vīḍv aṃho jahi rakṣo mahi cid vāvṛdhānam ||",
+          "english_griffith": "Punish us not for a false brother's trespass. Let us not feel the might of friend or foeman."
+        },
+        {
+          "verse": 15,
+          "sanskrit_devanagari": "एभिर भव सुमना अग्ने अर्कैर इमान सप्र्श मन्मभिः शूर वाजान |\nउत बरह्माण्य अङगिरो जुषस्व सं ते शस्तिर देववाता जरेत ||",
+          "sanskrit_iast": "ebhir bhava sumanā aghne arkair imān spṛśa manmabhiḥ śūra vāgān |\nuta brahmāṇy aṅghiro juṣasva saṃ te śastir devavātā jareta ||",
+          "english_griffith": "O Agni, keep us safe with thy protection, loving us, honoured God! and ever guarding."
+        },
+        {
+          "verse": 16,
+          "sanskrit_devanagari": "एता विश्वा विदुषे तुभ्यं वेधो नीथान्य अग्ने निण्या वचांसि |\nनिवचना कवये काव्यान्य अशंसिषम मतिभिर विप्र उक्थैः ||",
+          "sanskrit_iast": "etā viśvā viduṣe tubhyaṃ vedho nīthāny aghne niṇyā vacāṃsi |\nnivacanā kavaye kāvyāny aśaṃsiṣam matibhir vipra ukthaiḥ ||",
+          "english_griffith": "Through these our songs of praise be gracious, Agni; moved by our prayers, O Hero, touch our viands."
         }
       ]
     },
@@ -698,7 +982,7 @@
       "rishi_sanskrit": "वामदेव गौतम",
       "rishi_english": "Vāmadeva Gautama",
       "chandas": "Trishtubh",
-      "verses": [
+      "mantras": [
         {
           "verse": 1,
           "sanskrit_devanagari": "परत्य अग्निर उषसाम अग्रम अख्यद विभातीनां सुमना रत्नधेयम |\nयातम अश्विना सुक्र्तो दुरोणम उत सूर्यो जयोतिषा देव एति ||",
@@ -728,6 +1012,114 @@
           "sanskrit_devanagari": "अनायतो अनिबद्धः कथायं नयङङ उत्तानो ऽव पद्यते न |",
           "sanskrit_iast": "anāyato anibaddhaḥ kathāyaṃ nyaṅṅ uttāno 'va padyate na |",
           "english_griffith": "How is it that, unbound and not supported, he falleth not although directed downward? By what self power moves he? Who hath seen it? He guards the vault of heaven, a close-set pillar."
+        }
+      ]
+    },
+    {
+      "sukta": 14,
+      "deity_english": "Agni, Savitar, Ashvins, Ushas, Surya",
+      "deity_sanskrit": "अग्नि, सवितृ, अश्विनौ, उषस्, सूर्य",
+      "rishi_english": "Vāmadeva Gautama",
+      "rishi_sanskrit": "वामदेव गौतम",
+      "mantras": [
+        {
+          "verse": 1,
+          "sanskrit_devanagari": "परत्य अग्निर उषसो जातवेदा अख्यद देवो रोचमाना महोभिः |\nआ नासत्योरुगाया रथेनेमं यज्ञम उप नो यातम अछ ||",
+          "sanskrit_iast": "praty aghnir uṣaso jātavedā akhyad devo rocamānā mahobhiḥ |\nā nāsatyorughāyā rathenemaṃ yajñam upa no yātam acha ||",
+          "english_griffith": "The God hath looked, even Agni Jātavedas, to meet the Dawns refulgent in their glories. Come on your chariot, ye who travel widely, come to this sacrifice of ours, Nāsatyas."
+        },
+        {
+          "verse": 2,
+          "sanskrit_devanagari": "ऊर्ध्वं केतुं सविता देवो अश्रेज जयोतिर विश्वस्मै भुवनाय कर्ण्वन |\nआप्रा दयावाप्र्थिवी अन्तरिक्षं वि सूर्यो रश्मिभिश चेकितानः ||",
+          "sanskrit_iast": "ūrdhvaṃ ketuṃ savitā devo aśrej jyotir viśvasmai bhuvanāya kṛṇvan |\nāprā dyāvāpṛthivī antarikṣaṃ vi sūryo raśmibhiś cekitānaḥ ||",
+          "english_griffith": "Producing light for all the world of creatures, God Savitar hath raised aloft his banner. Making his presence known by sunbeams, Sūrya hath filled the firmament and earth and heaven."
+        },
+        {
+          "verse": 3,
+          "sanskrit_devanagari": "आवहन्त्य अरुणीर जयोतिषागान मही चित्रा रश्मिभिश चेकिताना |\nपरबोधयन्ती सुविताय देव्य उषा ईयते सुयुजा रथेन ||",
+          "sanskrit_iast": "āvahanty aruṇīr jyotiṣāghān mahī citrā raśmibhiś cekitānā |\nprabodhayantī suvitāya devy uṣā īyate suyujā rathena ||",
+          "english_griffith": "Red Dawn is come, riding with brightness onward, distinguished by her beams, gay-hued and mighty. Dawn on her nobly-harnessed car, the Goddess, awaking men to happiness, approacheth."
+        },
+        {
+          "verse": 4,
+          "sanskrit_devanagari": "आ वां वहिष्ठा इह ते वहन्तु रथा अश्वास उषसो वयुष्टौ |\nइमे हि वाम मधुपेयाय सोमा अस्मिन यज्ञे वर्षणा मादयेथाम ||",
+          "sanskrit_iast": "ā vāṃ vahiṣṭhā iha te vahantu rathā aśvāsa uṣaso vyuṣṭau |\nime hi vām madhupeyāya somā asmin yajñe vṛṣaṇā mādayethām ||",
+          "english_griffith": "May those most powerful steeds and chariot bring you, O Aśvins, hither at the break of morning. Here for your draught of meath are Soma juices: at this our sacrifice rejoice, ye Mighty."
+        },
+        {
+          "verse": 5,
+          "sanskrit_devanagari": "अनायतो अनिबद्धः कथायं नयङङ उत्तानो ऽव पद्यते न |",
+          "sanskrit_iast": "anāyato anibaddhaḥ kathāyaṃ nyaṅṅ uttāno 'va padyate na |",
+          "english_griffith": "How is it that, unbound and unsupported, he falleth not although directed downward? By what self-power moves he? Who hath seen it? He guards the vault of heaven, a close-set pillar."
+        }
+      ]
+    },
+    {
+      "sukta": 15,
+      "deity_english": "Agni, Ashvins",
+      "deity_sanskrit": "अग्नि, अश्विनौ",
+      "rishi_english": "Vāmadeva Gautama",
+      "rishi_sanskrit": "वामदेव गौतम",
+      "mantras": [
+        {
+          "verse": 1,
+          "sanskrit_devanagari": "अग्निर होता नो अध्वरे वाजी सन परि णीयते | देवो देवेषु यज्ञियः ||",
+          "sanskrit_iast": "aghnir hotā no adhvare vājī san pari ṇīyate | devo deveṣu yajñiyaḥ ||",
+          "english_griffith": "AGNI the Herald, like a horse, is led forth at our solemn rite, God among Gods adorable."
+        },
+        {
+          "verse": 2,
+          "sanskrit_devanagari": "परि तरिविष्ट्य अध्वरं यात्य अग्नी रथीर इव | आ देवेषु परयो दधत ||",
+          "sanskrit_iast": "pari triviṣṭy adhvaraṃ yāty aghnī rathīr iva | ā deveṣu prayo dadhat ||",
+          "english_griffith": "Three times unto our solemn rite comes Agni like a charioteer, Bearing the viands to the Gods."
+        },
+        {
+          "verse": 3,
+          "sanskrit_devanagari": "परि वाजपतिः कविर अग्निर हव्यान्य अक्रमीत | दधद रत्नानि दाशुषे ||",
+          "sanskrit_iast": "pari vājapatiḥ kavir aghnir havyāny akramīt | dadhad ratnāni dāśuṣe ||",
+          "english_griffith": "Round the oblations hath he paced, Agni the Wise, the Lord of Strength, Giving the offerer precious boons."
+        },
+        {
+          "verse": 4,
+          "sanskrit_devanagari": "अयं यः सर्ञ्जये पुरो दैववाते समिध्यते | दयुमां अमित्रदम्भनः ||",
+          "sanskrit_iast": "ayaṃ yaḥ sṛñjaye puro daivavāte samidhyate | dyumāṃ amitradambhanaḥ ||",
+          "english_griffith": "He who is kindled eastward for Sṛñjaya, Devāvata's son, Resplendent, tamer of the foe."
+        },
+        {
+          "verse": 5,
+          "sanskrit_devanagari": "अस्य घा वीर ईवतो ऽगनेर ईशीत मर्त्यः | तिग्मजम्भस्य मीळ्हुषः ||",
+          "sanskrit_iast": "asya ghā vīra īvato 'ghner īśīta martyaḥ | tighmajambhasya mīḷhuṣaḥ ||",
+          "english_griffith": "So mighty be the Agni whom the mortal hero shall command, With sharpened teeth and bountiful."
+        },
+        {
+          "verse": 6,
+          "sanskrit_devanagari": "तम अर्वन्तं न सानसिम अरुषं न दिवः शिशुम | मर्म्र्ज्यन्ते दिवे-दिवे ||",
+          "sanskrit_iast": "tam arvantaṃ na sānasim aruṣaṃ na divaḥ śiśum | marmṛjyante dive-dive ||",
+          "english_griffith": "Day after day they dress him, as they clean a horse who wins the prize. Dress the red Scion of the Sky."
+        },
+        {
+          "verse": 7,
+          "sanskrit_devanagari": "बोधद यन मा हरिभ्यां कुमारः साहदेव्यः | अछा न हूत उद अरम ||",
+          "sanskrit_iast": "bodhad yan mā haribhyāṃ kumāraḥ sāhadevyaḥ | achā na hūta ud aram ||",
+          "english_griffith": "When Sahadeva's princely son with two bay horses thought of me, Summoned by him I drew not back."
+        },
+        {
+          "verse": 8,
+          "sanskrit_devanagari": "उत तया यजता हरी कुमारात साहदेव्यात | परयता सद्य आ ददे ||",
+          "sanskrit_iast": "uta tyā yajatā harī kumārāt sāhadevyāt | prayatā sadya ā dade ||",
+          "english_griffith": "And truly those two noble bays I straightway took when offered me, From Sahadeva's princely son."
+        },
+        {
+          "verse": 9,
+          "sanskrit_devanagari": "एष वां देवाव अश्विना कुमारः साहदेव्यः | दीर्घायुर अस्तु सोमकः ||",
+          "sanskrit_iast": "eṣa vāṃ devāv aśvinā kumāraḥ sāhadevyaḥ | dīrghāyur astu somakaḥ ||",
+          "english_griffith": "Long, O ye Aśvins, may he live, your care, ye Gods, the princely son Of Sahadeva, Somaka."
+        },
+        {
+          "verse": 10,
+          "sanskrit_devanagari": "तं युवं देवाव अश्विना कुमारं साहदेव्यम | दीर्घायुषं कर्णोतन ||",
+          "sanskrit_iast": "taṃ yuvaṃ devāv aśvinā kumāraṃ sāhadevyam | dīrghāyuṣaṃ kṛṇotana ||",
+          "english_griffith": "Cause him the youthful prince, the son of Sahadeva, to enjoy Long life, O Aśvins, O ye Gods."
         }
       ]
     }

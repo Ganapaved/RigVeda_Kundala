@@ -2,14 +2,23 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
+const session = require('express-session');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(session({
+  secret:"rigveda",
+  resave:false,
+  saveUninitialized:true,
+  cookie: {maxAge : 10 * 60 * 1000}, // 10 minutes
+}));
 
 // Import data
 const mandala4Data = require('./data/mandala4.json');
@@ -43,11 +52,13 @@ function calculateWordFrequency(text) {
 
 // Helper function to find deity mentions
 function findDeityMentions(sukta) {
-  const deities = ['agni', 'indra', 'soma', 'vayu', 'surya', 'vishnu', 'rudra', 'maruts'];
+  const deities = ['agni', 'indra', 'soma', 'vayu', 'surya', 'vishnu', 'rudra', 'maruts','ushas','varuna','mitra','brihaspati','tvastar','parjanya','yama','apam napat','ashvini'];
   const mentions = {};
   
   sukta.mantras.forEach(mantra => {
     const text = mantra.english_griffith.toLowerCase();
+    // console.log('text:', text);
+    
     deities.forEach(deity => {
       if (text.includes(deity)) {
         mentions[deity] = (mentions[deity] || 0) + 1;
@@ -77,7 +88,8 @@ app.get('/api/mandala/4', (req, res) => {
       suktas: suktasList
     });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch suktas data' });
+
+    res.status(500).json({ error: error.message });
   }
 });
 
@@ -162,6 +174,8 @@ app.post('/api/ai/summarize', async (req, res) => {
 app.get('/api/visualize/sukta/:id', (req, res) => {
   try {
     const suktaId = parseInt(req.params.id);
+    console.log('visualize suktaId:', suktaId);
+    
     const sukta = mandala4Data.suktas.find(s => s.sukta === suktaId);
     
     if (!sukta) {
@@ -186,6 +200,110 @@ app.get('/api/visualize/sukta/:id', (req, res) => {
     console.log('error:', error);
     
     res.status(500).json({ error: 'Failed to generate visualization data' });
+  }
+});
+
+app.post('/api/ai/quiz',async (req,res)=>{
+  try{
+    console.log('quiz is beaing generated');
+    
+    const suktaID = parseInt(req.body.suktaId)
+    console.log('suktaID:', suktaID);
+    
+    
+    if (!suktaID) {
+      console.log('Sukta ID is missing in request body');
+      
+      return res.status(400).json({ error: "Sukta ID is required" });
+    }
+
+    const sukta = mandala4Data.suktas.find(s => s.sukta === suktaID);
+    if (!sukta) {
+      console.log('Sukta not found for ID:', suktaID);
+      
+      return res.status(404).json({ error: "Sukta not found" });
+    }
+
+    const genAI =new GoogleGenerativeAI(process.env.API_KEY);
+    const model = genAI.getGenerativeModel({model : "models/gemini-flash-latest"});
+
+    const sanskritText = sukta.mantras.map(m => m.sanskrit_devanagari).join(' ');
+    const englishText = sukta.mantras.map(m => m.english_griffith).join(' ');
+
+    const prompt = `
+          You are an expert Sanskrit scholar and quiz maker.
+      Given this Rigveda Sukta ${sukta.sukta} from Mandala 4:
+      
+      Deity: ${sukta.deity}
+      Rishi: ${sukta.rishi}
+      Sanskrit: ${sanskritText}
+      English: ${englishText}
+
+      Create a quiz of 5 multiple choice questions about this sukta.
+      Include questions about the deity, rishi, content, and meaning.
+      
+      Format the result as valid JSON array:
+      [
+        {
+          "question": "Question text",
+          "options": ["Option A", "Option B", "Option C", "Option D"],
+          "correctAnswer": "Option A"
+        }
+      ]
+
+      Only produce the JSON array without any extra text or formatting.`;
+
+    const response = await model.generateContent(prompt);
+    let quizText = response.response.candidates[0].content.parts[0].text;
+    quizText = quizText.replace(/```json/g, '').replace(/```/g, '').trim();
+
+    const quizJson = JSON.parse(quizText);
+
+    req.session.quiz = { suktaId: parseInt(suktaID), questions: quizJson };
+    const quizForUser = quizJson.map(q => ({
+      question: q.question,
+      options: q.options
+    }));
+
+    res.json({ quiz: quizForUser });
+  }
+  catch(error){
+    console.log('error:', error);
+    res.status(500).json({ error: 'Failed to generate quiz' });
+  }
+});
+
+app.post('/api/ai/quiz/submit', (req, res) => {
+  try {
+    const { answers } = req.body;
+    const quizData = req.session.quiz;
+
+    if (!quizData) return res.status(400).json({ error: "No quiz found in session" });
+
+    const quiz = quizData.questions;
+    let score = 0;
+    const results = [];
+
+    quiz.forEach((q, i) => {
+      const isCorrect = answers[i] === q.correctAnswer;
+      if (isCorrect) score++;
+      
+      results.push({
+        question: q.question,
+        userAnswer: answers[i],
+        correctAnswer: q.correctAnswer,
+        isCorrect
+      });
+    });
+
+    res.json({ 
+      score, 
+      total: quiz.length,
+      results 
+    });
+  } catch (error) {
+    console.error('Quiz submission error:', error);
+    res.status(500).json({ error: "Failed to submit quiz" });
   }
 });
 
