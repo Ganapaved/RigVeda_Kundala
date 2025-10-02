@@ -10,6 +10,7 @@ import VisualizationTab from '../components/VisualizationTab';
 import ReactMarkdown from 'react-markdown';
 import QuizResult from '../components/QuixResult';
 import QuizTab from '../components/QuizTab';
+import { apiCall } from '../utilis/api';
 
 
 const translations = {
@@ -150,13 +151,11 @@ const SuktaView = () => {
     try {
       setLoading(true);
       setError('');
-      const response = await fetch(`/api/mandala/4/sukta/${id}`);
+      const data = await apiCall(`/api/mandala/4/sukta/${id}`);
       
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
       
-      const data = await response.json();
+      
+      
       setSukta(data);
     } catch (err) {
       setError('Failed to load sukta. Please check if the backend server is running.');
@@ -169,22 +168,17 @@ const SuktaView = () => {
   const fetchSummary = async () => {
     try {
       setLoadingSummary(true);
-      const response = await fetch('/api/ai/summarize', {
+      const response = await apiCall('/api/ai/summarize', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
         body: JSON.stringify({
           mandala: 4,
           sukta: parseInt(id),
         }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to generate summary');
-      }
+     
 
-      const data = await response.json();
+      const data = response;
       setSummary(data.summary);
     } catch (err) {
       console.error('Error generating summary:', err);

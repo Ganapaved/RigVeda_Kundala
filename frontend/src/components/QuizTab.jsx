@@ -4,6 +4,7 @@ import { useSpring, animated } from 'react-spring';
 import { Brain, CircleCheck as CheckCircle, Circle as XCircle, Trophy, Target, Sparkles } from 'lucide-react';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';
+import { apiCall } from '../utilis/api';
 
 const FloatingSymbol = ({ symbol, delay = 0 }) => {
   const float = useSpring({
@@ -46,20 +47,14 @@ const QuizTab = ({ suktaId, onQuizComplete }) => {
       setLoading(true);
       setError('');
       
-      const response = await fetch('/api/ai/quiz', {
+      const response = await apiCall('/api/ai/quiz', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
         body: JSON.stringify({ suktaId }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to generate quiz');
-      }
+      
 
-      const data = await response.json();
+      const data = response
       setQuiz(data.quiz);
       setAnswers({});
       setCurrentQuestion(0);
@@ -84,20 +79,14 @@ const QuizTab = ({ suktaId, onQuizComplete }) => {
       
       const answersArray = quiz.map((_, index) => answers[index] || '');
       
-      const response = await fetch('/api/ai/quiz/submit', {
+      const response = await apiCall('/api/ai/quiz/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
         body: JSON.stringify({ answers: answersArray }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit quiz');
-      }
+      
 
-      const results = await response.json();
+      const results =  response;
       onQuizComplete(results);
     } catch (err) {
       setError('Failed to submit quiz. Please try again.');

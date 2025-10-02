@@ -5,6 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import { Sparkles, TrendingUp, ChartPie as PieChartIcon } from 'lucide-react';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';
+import { apiCall } from '../utilis/api';
 
 const COLORS = ['#f59e0b', '#6366f1', '#ec4899', '#10b981', '#8b5cf6', '#06b6d4'];
 
@@ -51,13 +52,13 @@ const VisualizationTab = ({ suktaId, selectedVerse }) => {
     try {
       setLoading(true);
       setError('');
-      const response = await fetch(`/api/visualize/sukta/${suktaId}`);
+      const response = await apiCall(`/api/visualize/sukta/${suktaId}`);
       
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+      // if (!response.ok) {
+      //   throw new Error(`HTTP error! status: ${response.status}`);
+      // }
       
-      const visualData = await response.json();
+      const visualData = response;
       setData(visualData);
     } catch (err) {
       setError('Failed to load visualization data');

@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { Flame, BookOpen, Sparkles, Crown, Star } from 'lucide-react';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
+import { apiCall } from '../utilis/api';
 
 const HomePage = () => {
   const [suktas, setSuktas] = useState([]);
@@ -37,13 +38,10 @@ const HomePage = () => {
     try {
       setLoading(true);
       setError('');
-      const response = await fetch('/api/mandala/4');
+      const data = await apiCall('/api/mandala/4');
       
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
       
-      const data = await response.json();
+      
       setSuktas(data.suktas);
     } catch (err) {
       setError('Failed to load suktas. Please check if the backend server is running.');
